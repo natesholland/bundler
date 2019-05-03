@@ -1,3 +1,6 @@
+variables:
+  ci: true
+
 jobs:
 - job: Windows
   pool:
