@@ -55,7 +55,11 @@ RSpec.configure do |config|
   # once we have a large number of failures (indicative of core pieces of
   # bundler being broken) so that running the full test suite doesn't take
   # forever due to memory constraints
-  config.fail_fast ||= 25 if ENV["CI"]
+  config.fail_fast ||= if Gem.win_platform?
+    250
+  elsif ENV["CI"]
+    25
+  end
 
   if ENV["BUNDLER_SUDO_TESTS"] && Spec::Sudo.present?
     config.filter_run :sudo => true
