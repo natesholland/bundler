@@ -7,6 +7,7 @@ steps:
 - script: |
     ruby -v
     ridk version
+    ruby -e 'puts URI("file:///D:/a/1/s/tmp/gems/remote1/quick/Marshal.4.8/rack-1.0.0.gemspec.rz").path'
   displayName: 'ruby -v + ridk version'
 
 - script: |
