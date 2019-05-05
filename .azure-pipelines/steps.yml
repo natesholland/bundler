@@ -5,7 +5,7 @@ steps:
     versionSpec: '= 2.5'
 
 - script: |
-    ruby -e 'puts URI("file:///D:/a/1/s/tmp/gems/remote1/quick/Marshal.4.8/rack-1.0.0.gemspec.rz").path'
+    ruby -ruri -e 'puts URI("file:///D:/a/1/s/tmp/gems/remote1/quick/Marshal.4.8/rack-1.0.0.gemspec.rz").path'
   displayName: 'Experiment'
 
 - script: |
